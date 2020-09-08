@@ -25,7 +25,7 @@ module.exports = {
             if (mainItems.length < 4)
                 continue // not a valid commit message, can't parse
     
-            // extra data = file info + description. Both might not be present
+            // extra data = file info + description. Neither can not be present.
             let extraData = mainItems[3].trim().match(/\n(.*)/g)
             
             const revision = mainItems[0].trim().match(/r(.*)/).pop()
